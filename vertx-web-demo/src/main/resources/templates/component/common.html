@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:fragment="head">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="shortcut icon" href="/static/image/logo.png">
+    <link rel="stylesheet" href="/static/css/icomoon.css">
+    <link rel="stylesheet" href="/static/css/iuyy.css">
+    <script src="/static/js/jquery.min.js"></script>
+    <script src="/static/js/nav.js"></script>
+</head>
+
+<header class="iuyy-login-header" th:fragment="header">
+    <div class="iuyy-header-logo">
+        <img src="/static/image/logo.png">
+        <div>iuyy.net</div>
+    </div>
+</header>
+
+<div th:fragment="nav" class="iuyy-blog-nav">
+
+    <div class="iuyy-blog-site">
+        <div class="iuyy-blog-img">
+            <img src="/static/image/logo.png">
+        </div>
+        <div class="iuyy-blog-name">
+            iuyy.net
+        </div>
+    </div>
+
+    <div class="iuyy-nav-menu">
+        <ul id="main-nav">
+            <li><a href="/index" id="home" class="active iuyy-nav-item no-submenu"><i class="icon-home"></i>Home</a></li>
+            <li><a href="/toStatistics" id="statistics" class="iuyy-nav-item no-submenu"><i class="icon-statistics"></i>Statistics</a></li>
+            <li><a href="" id="blog" class="iuyy-nav-item"><i class="icon-blog"></i>Blog</a>
+                <ul class="iuyy-nav-sub">
+                    <li><a href="/toAddBlog" id="publish">写博客</a></li>
+                    <li><a href="/toDraft" id="draft">草稿箱</a></li>
+                    <li><a href="/toBlog" id="blogger">博文管理</a></li>
+                    <li><a href="/toRecycle" id="recycle">回收站</a></li>
+                </ul>
+            </li>
+            <li><a href="" id="system" class="iuyy-nav-item"><i class="icon-cogs"></i>System</a>
+                <ul class="iuyy-nav-sub">
+                    <li><a href="/toCategory" id="category">系统版块</a></li>
+                    <li><a href="/toBlogColumn" id="blogColumn">博客栏目</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div class="iuyy-logout">
+        <a href="/logout">退出登陆</a>
+    </div>
+</div>
+</html>

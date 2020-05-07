@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>iuyy.net</title>
+    <script th:replace="component/common::head"></script>
+</head>
+<body class="iuyy-login-body">
+    <div th:replace="component/common::header"></div>
+    <div class="iuyy-login-area">
+        <form id="loginForm" action="/login" method="post">
+            <div class="iuyy-login-form">
+                <div class="iuyy-login-title">登陆</div>
+                <div class="iuyy-login-msg">
+                    <span th:text="${msg}"></span>
+                </div>
+                <div class="iuyy-login-box">
+                    <input class="iuyy-login-input" id="username" name="username" placeholder="Username">
+                </div>
+                <div class="iuyy-login-box">
+                    <input type="password" class="iuyy-login-input" id="password" name="password" placeholder="Password"/>
+                </div>
+                <div class="iuyy-login-box-submit">
+                    <input type="button" class="iuyy-login-submit" id="loginBtn" value="Sign in" />
+                </div>
+            </div>
+        </form>
+    </div>
+<footer class="iuyy-login-footer">
+    <span>@Copyright 2018 ~ 2019 ${sysname} version ${ver}, 版权所有</span>
+</footer>
+</body>
+<script>
+    $("#loginForm").keydown(function(e){
+        var e = e || event,
+            keycode = e.which || e.keyCode;
+        if (keycode == 13) {
+            $("#loginBtn").trigger("click");
+        }
+    });
+    $("#loginBtn").click(function () {
+        var uname = $("#username").val();
+        var pwd = $("#password").val();
+        if(!uname){
+            $("#username").css("borderColor","red");
+        }else if(!pwd){
+            $("#username").css("borderColor","#FFF");
+            $("#password").css("borderColor","red");
+        }else{
+            $("#loginForm").submit();
+        }
+    })
+
+</script>
+</html>
