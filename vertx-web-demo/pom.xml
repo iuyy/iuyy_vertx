@@ -12,7 +12,7 @@
     <artifactId>vertx-web-demo</artifactId>
 
     <properties>
-        <vertx.version>3.9.0</vertx.version>
+        <vertx.version>3.9.4</vertx.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
